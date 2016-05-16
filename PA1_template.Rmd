@@ -2,7 +2,12 @@
 title: "PA1_template.Rmd"
 author: "Christopher Brodowski"
 date: "May 15, 2016"
-output: html_document
+output:
+    html_document:
+        keep_md: true
+        fig_width: 7
+        fig_height: 6
+        fig_caption: true
 ---
 
 **1. Code for reading in the data set and/or processing the data**
@@ -41,11 +46,10 @@ for (i in 1:length(unique_intervals)) {
 
 **2. Histogram of the total number of steps taken each day**
 
-```{r, echo=TRUE}
-#png(file="histogram1.png")
+```{r, echo=TRUE, fig.width=6, fig.height=4}
 hist(totals, col='red', main='Mean Daily Total Number of Steps',
      xlab="Number of Steps")
-#dev.off()
+print("============ Check the PA1_template_files/figure-html directory for the pics! =============")
 ```
 
 **3. Mean and median number of steps taken each day**
@@ -59,13 +63,14 @@ med
 
 **4. Time series plot of the average number of steps taken**
 
-```{r, echo=TRUE}
+```{r, echo=TRUE, fig.width=6, fig.height=4}
 plot(x=unique_intervals, y=interval_means,
          xlab="5-minute Interval",
          ylab="Mean # of Steps",
          type='l',
          col='black', main="Avg. # of Steps Taken For Each 5-min Interval"
     )
+print("======== Check the PA1_template_files/figure-html directory for the pics! ===============")
 ```
 
 **5. The 5-minute interval that, on average, contains the maximum number of steps**
@@ -103,7 +108,8 @@ for (i in 1:length(unique_times)) {
 
 **7. Histogram of the total number of steps taken each day after removing missing values**
 
-```{r, echo=TRUE}
+```{r, echo=TRUE, fig.width=6, fig.height=4}
 hist(new_totals, col='blue', main='Mean Daily # Steps, NA replaced w/interval means',
          xlab="Number of Steps")
+print("============== Check the PA1_template_files/figure-html directory! ======================")
 ```

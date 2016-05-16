@@ -40,7 +40,6 @@ for (i in 1:length(unique_intervals)) {
 
 
 ```r
-#png(file="histogram1.png")
 hist(totals, col='red', main='Mean Daily Total Number of Steps',
      xlab="Number of Steps")
 ```
@@ -48,7 +47,11 @@ hist(totals, col='red', main='Mean Daily Total Number of Steps',
 ![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 ```r
-#dev.off()
+print("============ Check the PA1_template_files/figure-html directory for the pics! =============")
+```
+
+```
+## [1] "============ Check the PA1_template_files/figure-html directory for the pics! ============="
 ```
 
 **3. Mean and median number of steps taken each day**
@@ -85,6 +88,14 @@ plot(x=unique_intervals, y=interval_means,
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+
+```r
+print("======== Check the PA1_template_files/figure-html directory for the pics! ===============")
+```
+
+```
+## [1] "======== Check the PA1_template_files/figure-html directory for the pics! ==============="
+```
 
 **5. The 5-minute interval that, on average, contains the maximum number of steps**
 
@@ -134,3 +145,11 @@ hist(new_totals, col='blue', main='Mean Daily # Steps, NA replaced w/interval me
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+
+```r
+print("============== Check the PA1_template_files/figure-html directory! ======================")
+```
+
+```
+## [1] "============== Check the PA1_template_files/figure-html directory! ======================"
+```
